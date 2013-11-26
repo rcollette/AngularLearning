@@ -1,35 +1,36 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="LearningApp" data-ng-controller="MasterController">
+<html data-ng-app="LearningApp" data-ng-controller="MasterController as master">
 <head>
-    <title>{{Title}}</title>
+    <title>{{master.Title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Styles/master.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <div id="MainMenu" class="menu flyout" data-ng-shown="IsMenuVisible">
+        <div id="MainMenu" class="menu flyout" data-ng-shown="master.IsMenuVisible">
             <div id="MainMenuHeader" class="header">
-                <button type="button" id="HideMainMenuButton" title="Hide Main Menu" data-ng-click="HideMenu()"
-                    class="menu hideit glyphicon glyphicon-arrow-left">
-                </button>
+                <span id="HideMainMenuButton" title="Hide Main Menu" data-ng-click="master.HideMenu()"
+                    class="menu hideit glyphicon glyphicon-arrow-left"></span>
                 <h1>
                     Main Menu</h1>
             </div>
             <ul>
-                <li data-ng-click="Action1()" data-ng-disabled="IsMenuItem1Disabled">MenuItem1</li>
-                <li data-ng-click="Action2()" data-ng-disabled="IsMenuItem2Disabled">MenuItem2</li>
-                <li data-ng-click="Action3()" data-ng-disabled="IsMenuItem3Disabled">MenuItem3</li>
+                <li data-ng-click="master.Action1()" data-ng-disabled="master.IsMenuItem1Disabled">MenuItem1</li>
+                <li data-ng-click="master.Action2()" data-ng-disabled="master.IsMenuItem2Disabled">MenuItem2</li>
+                <li data-ng-click="master.Action3()" data-ng-disabled="master.IsMenuItem3Disabled">MenuItem3</li>
             </ul>
         </div>
-        <button type="button" id="ShowMainMenuButton" title="Show Main Menu" data-ng-click="ShowMenu()"
-            data-ng-show="!IsMainMenuVisible" class="menu showit glyphicon glyphicon-align-justify" />
+        <span type="button" id="ShowMainMenuButton" title="Show Main Menu" data-ng-click="master.ShowMenu()"
+            data-ng-show="!master.IsMainMenuVisible" class="menu showit glyphicon glyphicon-align-justify">
+        </span>
         <!--Only major navigation links should be in a nav container, not actions or footer links-->
         <nav id="TabContainer">
-            <ul id="Tabs" class="tabs">
-                <li id="Tab1" data-ng-click="#/partialPageView1" data-ng-class="selected:SelectedTabName=='Tab1'">
+            <ul id="Tabs" class="nav nav-tabs">
+                <li id="Tab1" data-ng-click="#/partialPageView1" data-ng-class="{'selected':master.SelectedTabName=='Tab1'}">
                     Tab1</li>
-                <li id="Tab2" data-ng-click="#/partialPageView2" data-ng-class="selected:$index==SelectedTabIndex">
+                <li id="Tab2" data-ng-click="#/partialPageView2" data-ng-class="{'selected':$index==master.SelectedTabIndex}">
                     Tab2</li>
             </ul>
         </nav>
@@ -38,13 +39,13 @@
     </main>
     <footer>
     </footer>
-    <script src="Scripts/jquery/jquery-1.10.2.min.js" />
-    <script src="Scripts/angular/angular.js" />
-    <script src="Scripts/angular/angular-route.js" />
-    <script src="Scripts/controllers/MasterController.js" />
-    <script src="Scripts/app/app.js" />
-    <script src="Scripts/app/appControllers.js" />
-    <script src="Scripts/app/appRoutes.js" />
-    <script src="Scripts/bootstrap.js" />
+    <script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular/angular.js"></script>
+    <script src="Scripts/angular/angular-route.js"></script>
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/controllers/MasterController.js"></script>
+    <script src="Scripts/app/appControllers.js"></script>
+    <script src="Scripts/app/appRoutes.js"></script>
 </body>
 </html>
