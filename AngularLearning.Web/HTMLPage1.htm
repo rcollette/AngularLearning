@@ -28,9 +28,9 @@
         <!--Only major navigation links should be in a nav container, not actions or footer links-->
         <nav id="TabContainer">
             <ul id="Tabs" class="nav nav-tabs">
-                <li id="Tab1" data-ng-click="#/partialPageView1" data-ng-class="{'selected':master.SelectedTabName=='Tab1'}">
+                <li id="Tab1" data-ng-click="partialPageView1" data-ng-class="{'selected':master.SelectedTabName=='Tab1'}">
                     Tab1</li>
-                <li id="Tab2" data-ng-click="#/partialPageView2" data-ng-class="{'selected':$index==master.SelectedTabIndex}">
+                <li id="Tab2" data-ng-click="partialPageView2" data-ng-class="{'selected':$index==master.SelectedTabIndex}">
                     Tab2</li>
             </ul>
         </nav>
