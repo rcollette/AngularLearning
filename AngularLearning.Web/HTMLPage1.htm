@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="LearningApp" data-ng-controller="MasterController as master">
+<html data-ng-controller="MasterController as master" ng-cloak>
 <head>
     <title>{{master.Title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Styles/master.css" rel="stylesheet" />
+    <script src="Scripts/require.js" data-main="Scripts/main.js"></script>
 </head>
 <body>
     <header>
@@ -22,16 +23,14 @@
                 <li data-ng-click="master.Action3()" data-ng-disabled="master.IsMenuItem3Disabled">MenuItem3</li>
             </ul>
         </div>
-        <span type="button" id="ShowMainMenuButton" title="Show Main Menu" data-ng-click="master.ShowMenu()"
+        <span id="ShowMainMenuButton" title="Show Main Menu" data-ng-click="master.ShowMenu()"
             data-ng-show="!master.IsMainMenuVisible" class="menu showit glyphicon glyphicon-align-justify">
         </span>
         <!--Only major navigation links should be in a nav container, not actions or footer links-->
-        <nav id="TabContainer">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <ul id="Tabs" class="nav nav-tabs">
-                <li id="Tab1" data-ng-click="partialPageView1" data-ng-class="{'selected':master.SelectedTabName=='Tab1'}">
-                    Tab1</li>
-                <li id="Tab2" data-ng-click="partialPageView2" data-ng-class="{'selected':$index==master.SelectedTabIndex}">
-                    Tab2</li>
+                <li id="{{tab.Id}}" data-ng-class="{'active':master.SelectedTab==tab}"><a data-ng-click="tab.Activate()"
+                    href="{{tab.RouteName}}">{{tab.Name}}</a></li>
             </ul>
         </nav>
     </header>
@@ -39,13 +38,13 @@
     </main>
     <footer>
     </footer>
-    <script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
+    <!--<script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/angular/angular.js"></script>
     <script src="Scripts/angular/angular-route.js"></script>
     <script src="Scripts/app/app.js"></script>
     <script src="Scripts/controllers/MasterController.js"></script>
     <script src="Scripts/app/appControllers.js"></script>
-    <script src="Scripts/app/appRoutes.js"></script>
+    <script src="Scripts/app/appRoutes.js"></script>-->
 </body>
 </html>

@@ -25,12 +25,10 @@ require([
     'app',
     'MasterController'
 ], function (angular, angularRoutes, app, masterController) {
-    $(document).ready(function () {
-        var $html = $('html');
-        angular.bootstrap($html, ['LearningApp']);
-
-        // More info: https://groups.google.com/forum/#!msg/angular/yslVnZh9Yjk/MLi3VGXZLeMJ
-        $html.addClass('ng-app');
+        $(document).ready(function () {
+            var $html = $('html');
+            angular.bootstrap($html, ['LearningApp']);
+            // More info: https://groups.google.com/forum/#!msg/angular/yslVnZh9Yjk/MLi3VGXZLeMJ
+            $html.addClass('ng-app');
+        });
     });
-});
-//# sourceMappingURL=main.js.map

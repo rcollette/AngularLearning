@@ -4,16 +4,19 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-/// <reference path="PartialPageController.ts" />
-var Controllers;
-(function (Controllers) {
+define(["require", "exports", 'app', 'PartialPageController'], function(require, exports, __app__, __base__) {
+    var app = __app__;
+    var base = __base__;
+
     var PartialPage2Controller = (function (_super) {
         __extends(PartialPage2Controller, _super);
         function PartialPage2Controller() {
             _super.apply(this, arguments);
         }
         return PartialPage2Controller;
-    })(Controllers.PartialPageController);
-    Controllers.PartialPage2Controller = PartialPage2Controller;
-})(Controllers || (Controllers = {}));
-//# sourceMappingURL=PartialPage1Controller.js.map
+    })(base.PartialPageController);
+    exports.PartialPage2Controller = PartialPage2Controller;
+
+    app.app.controller('PartialPage2Controller', ["$scope", PartialPage2Controller]);
+});
+//# sourceMappingURL=PartialPage2Controller.js.map

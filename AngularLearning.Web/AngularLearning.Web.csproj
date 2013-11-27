@@ -63,7 +63,7 @@
     <Content Include="partials\partial2.htm" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\main.js" />
+    <TypeScriptCompile Include="Scripts\app\controlModels\Tab.ts" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
     <Content Include="Scripts\angular\angular-cookies.js" />
@@ -83,20 +83,22 @@
     <Content Include="Scripts\angular\angular-touch.min.js" />
     <Content Include="Scripts\angular\angular.js" />
     <Content Include="Scripts\angular\angular.min.js" />
-    <TypeScriptCompile Include="Scripts\controllers\PartialPage1Controller.ts" />
-    <TypeScriptCompile Include="Scripts\controllers\PartialPage2Controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\PartialPage1Controller.ts" />
+    <TypeScriptCompile Include="Scripts\app\PartialPage2Controller.ts" />
     <TypeScriptCompile Include="Scripts\app\appControllers.ts" />
     <Content Include="Scripts\jquery\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery\jquery-1.10.2.min.js" />
-    <TypeScriptCompile Include="Scripts\controllers\MasterController.ts" />
-    <TypeScriptCompile Include="Scripts\models\MasterModel.ts" />
-    <TypeScriptCompile Include="Scripts\controllers\PartialPageController.ts" />
+    <TypeScriptCompile Include="Scripts\app\MasterController.ts" />
+    <TypeScriptCompile Include="Scripts\app\PartialPageController.ts" />
+    <TypeScriptCompile Include="Scripts\main.ts" />
     <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\require.min.js" />
     <Content Include="Scripts\typings\angular\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\app\appRoutes.ts" />
     <TypeScriptCompile Include="Scripts\app\appFactories.ts" />
     <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\requirejs\require.d.ts" />
     <Content Include="Styles\master.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -149,11 +151,13 @@
     <TypeScriptTarget>ES3</TypeScriptTarget>
     <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptTarget>ES3</TypeScriptTarget>
     <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

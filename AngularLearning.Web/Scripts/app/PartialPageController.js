@@ -1,12 +1,12 @@
-/// <reference path="../models/MasterModel.ts" />
-var Controllers;
-(function (Controllers) {
+define(["require", "exports"], function(require, exports) {
     var PartialPageController = (function () {
         function PartialPageController($scope) {
             this.$scope = $scope;
         }
+        PartialPageController.prototype.test = function () {
+        };
         return PartialPageController;
     })();
-    Controllers.PartialPageController = PartialPageController;
-})(Controllers || (Controllers = {}));
+    exports.PartialPageController = PartialPageController;
+});
 //# sourceMappingURL=PartialPageController.js.map

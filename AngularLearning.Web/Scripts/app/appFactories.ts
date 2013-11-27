@@ -1,14 +1,12 @@
 /// <reference path="../typings/angular/angular.d.ts" />
 "use strict";
-var app = angular.module('LearngingApp', []);
-
+import app = require('app');
 module Application {
     export class Page {
         private _title: string = "default";
-
     }
 }
 
-app.factory('Page', function () {
+app.app.factory('Page', function () {
     return new Application.Page();
 });
