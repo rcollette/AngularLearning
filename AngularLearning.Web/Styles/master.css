@@ -1,7 +1,15 @@
 ﻿#ShowMainMenuButton
 {
     float: left;
+    margin-right: 10px;
 }
+
+header nav.navbar
+{
+    display: inline;
+}
+
+
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
 {
