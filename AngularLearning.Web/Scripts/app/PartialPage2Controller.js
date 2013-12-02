@@ -10,9 +10,11 @@ define(["require", "exports", 'app', 'PartialPageController'], function(require,
 
     var PartialPage2Controller = (function (_super) {
         __extends(PartialPage2Controller, _super);
-        function PartialPage2Controller() {
-            _super.apply(this, arguments);
+        function PartialPage2Controller($scope) {
+            _super.call(this, $scope);
+            this.SomeValue = "somevalue2";
         }
+        PartialPage2Controller.$injector = ['$scope'];
         return PartialPage2Controller;
     })(base.PartialPageController);
     exports.PartialPage2Controller = PartialPage2Controller;

@@ -1,5 +1,4 @@
-var ControlModels;
-(function (ControlModels) {
+define(["require", "exports"], function(require, exports) {
     var Tab = (function () {
         function Tab(Label, Id, Uri) {
             this.Label = Label;
@@ -8,6 +7,6 @@ var ControlModels;
         }
         return Tab;
     })();
-    ControlModels.Tab = Tab;
-})(ControlModels || (ControlModels = {}));
+    exports.Tab = Tab;
+});
 //# sourceMappingURL=Tab.js.map

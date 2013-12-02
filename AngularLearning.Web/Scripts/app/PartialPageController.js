@@ -2,9 +2,9 @@ define(["require", "exports"], function(require, exports) {
     var PartialPageController = (function () {
         function PartialPageController($scope) {
             this.$scope = $scope;
+            this.SomeValue = "default";
         }
-        PartialPageController.prototype.test = function () {
-        };
+        PartialPageController.$injector = ['$scope'];
         return PartialPageController;
     })();
     exports.PartialPageController = PartialPageController;

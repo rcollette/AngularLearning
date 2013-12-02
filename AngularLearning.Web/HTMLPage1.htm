@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE html>
-<html data-ng-controller="MasterController as master" ng-cloak>
+<html data-ng-controller="MasterController as master" data-ng-cloak="">
 <head>
     <title>{{master.Title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Styles/master.css" rel="stylesheet" />
-    <script src="Scripts/require.js" data-main="Scripts/main.js"></script>
 </head>
 <body>
     <header>
@@ -29,22 +28,15 @@
         <!--Only major navigation links should be in a nav container, not actions or footer links-->
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <ul id="Tabs" class="nav nav-tabs">
-                <li id="{{tab.Id}}" data-ng-class="{'active':master.SelectedTab==tab}"><a data-ng-click="tab.Activate()"
-                    href="{{tab.RouteName}}">{{tab.Name}}</a></li>
+                <li data-ng-repeat="tab in master.Tabs" id="{{tab.Id}}" data-ng-class="{'active':master.IsActiveTab(tab)}">
+                    <a data-ng-click="master.ActivateTab(tab)" href="{{tab.Uri}}">{{tab.Label}}</a></li>
             </ul>
         </nav>
     </header>
-    <main data-ng-view>
+    <main data-ng-view="">
     </main>
     <footer>
     </footer>
-    <!--<script src="Scripts/jquery/jquery-1.10.2.min.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/angular/angular.js"></script>
-    <script src="Scripts/angular/angular-route.js"></script>
-    <script src="Scripts/app/app.js"></script>
-    <script src="Scripts/controllers/MasterController.js"></script>
-    <script src="Scripts/app/appControllers.js"></script>
-    <script src="Scripts/app/appRoutes.js"></script>-->
+    <script src="Scripts/require.js" data-main="Scripts/main.js"></script>
 </body>
 </html>

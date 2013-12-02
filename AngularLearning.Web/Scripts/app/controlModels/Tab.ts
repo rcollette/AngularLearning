@@ -1,5 +1,3 @@
-module ControlModels {
-    export class Tab {
-        constructor(private Label: string, private Id: string, private Uri: string) { }
-    }
+export class Tab {
+    constructor(public Label: string, public Id: string, public Uri: string) { }
 }

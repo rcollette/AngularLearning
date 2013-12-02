@@ -5,15 +5,16 @@ var __extends = this.__extends || function (d, b) {
     d.prototype = new __();
 };
 define(["require", "exports", 'app', 'PartialPageController'], function(require, exports, __app__, __base__) {
-    /// <reference path="PartialPageController.ts" />
     var app = __app__;
     var base = __base__;
 
     var PartialPage1Controller = (function (_super) {
         __extends(PartialPage1Controller, _super);
-        function PartialPage1Controller() {
-            _super.apply(this, arguments);
+        function PartialPage1Controller($scope) {
+            _super.call(this, $scope);
+            this.SomeValue = "somevalue1";
         }
+        PartialPage1Controller.$injector = ['$scope'];
         return PartialPage1Controller;
     })(base.PartialPageController);
     exports.PartialPage1Controller = PartialPage1Controller;

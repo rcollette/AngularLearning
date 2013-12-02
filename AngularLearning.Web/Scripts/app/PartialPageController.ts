@@ -1,6 +1,7 @@
 export class PartialPageController {
-    constructor(private $scope) {
+    static $injector = ['$scope'];
+    constructor(public $scope: ng.IScope) {
     }
 
-    test(): void { }
+    public SomeValue: string = "default";
 }

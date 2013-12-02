@@ -1,13 +1,11 @@
 /// <reference path="../typings/angular/angular.d.ts" />
 "use strict";
 import app = require("app");
-import c1 = require("PartialPage1Controller");
-import c2 = require("PartialPage2Controller");
 
 app.app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.
-        when('/partialPageView1', { template: 'partials/partial1.htm', controller: c1.PartialPage1Controller }).
-        when('/partialPageView2', { template: 'partials/partial2.htm', controller: c2.PartialPage2Controller }).
+        when('/partialPageView1', { templateUrl: 'partials/partial1.htm', controller: 'PartialPage1Controller as m' }).
+        when('/partialPageView2', { templateUrl: 'partials/partial2.htm', controller: 'PartialPage2Controller as m' }).
         otherwise({ redirectTo: '/partialPageView1' });
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 }]);

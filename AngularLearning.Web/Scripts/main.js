@@ -22,9 +22,13 @@ require.config({
 require([
     'angular',
     'angularRoutes',
+    'PartialPageController',
+    'PartialPage1Controller',
+    'PartialPage2Controller',
     'app',
+    'appRoutes',
     'MasterController'
-], function (angular, angularRoutes, app, masterController) {
+], function (angular) {
     $(document).ready(function () {
         var $html = $('html');
         angular.bootstrap($html, ['LearningApp']);

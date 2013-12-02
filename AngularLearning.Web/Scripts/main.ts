@@ -1,5 +1,7 @@
 /// <reference path="typings/requirejs/require.d.ts" />
 "use strict";
+declare var Object;
+
 require.config({
     baseUrl: 'scripts/app',
     paths: {
@@ -22,9 +24,13 @@ require.config({
 require([
     'angular',
     'angularRoutes',
+    'PartialPageController',
+    'PartialPage1Controller',
+    'PartialPage2Controller',
     'app',
+    'appRoutes',
     'MasterController'
-], function (angular, angularRoutes, app, masterController) {
+], function (angular) {
         $(document).ready(function () {
             var $html = $('html');
             angular.bootstrap($html, ['LearningApp']);
