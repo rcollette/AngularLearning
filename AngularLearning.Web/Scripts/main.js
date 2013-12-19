@@ -5,7 +5,7 @@ require.config({
     paths: {
         angular: '../angular/angular',
         angularRoutes: '../angular/angular-route',
-        angularAnimate: '../angular/angular-animate.js',
+        angularAnimate: '../angular/angular-animate',
         jquery: '../jquery/jquery-1.10.2.min'
     },
     shim: {
