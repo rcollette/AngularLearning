@@ -2,14 +2,27 @@
 {
     float: left;
     margin-right: 10px;
+    z-index: 10;
+}
+
+#MainMenu
+{
+    z-index: 10;
+    position: absolute;
+    background: yellow;
+    border: 10px black;
+    width: 200px;
+}
+
+#HideMainMenuButton
+{
+    margin-right: 10px;
 }
 
 header nav.navbar
 {
     display: inline;
 }
-
-
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
 {

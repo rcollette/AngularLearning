@@ -3,6 +3,6 @@ define(["require", "exports"], function(require, exports) {
     "use strict";
     var angular = require('angular');
     var route = require('angularRoutes');
-    exports.app = angular.module('LearningApp', ['ngRoute']);
+    exports.app = angular.module('LearningApp', ['ngRoute', 'ngAnimate']);
 });
 //# sourceMappingURL=app.js.map

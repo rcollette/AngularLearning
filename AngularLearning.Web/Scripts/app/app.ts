@@ -2,4 +2,4 @@
 "use strict";
 var angular = require('angular');
 var route = require('angularRoutes');
-export var app = angular.module('LearningApp', ['ngRoute']);
+export var app = angular.module('LearningApp', ['ngRoute', 'ngAnimate']);

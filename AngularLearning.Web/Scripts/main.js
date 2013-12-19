@@ -5,11 +5,13 @@ require.config({
     paths: {
         angular: '../angular/angular',
         angularRoutes: '../angular/angular-route',
+        angularAnimate: '../angular/angular-animate.js',
         jquery: '../jquery/jquery-1.10.2.min'
     },
     shim: {
         angular: { 'exports': 'angular', deps: ['jquery'] },
         angularRoutes: { deps: ['angular'] },
+        angularAnimate: { deps: ['angular'] },
         angularMocks: { deps: ['angular'], 'exports': 'angular.mock' },
         jquery: { exports: '$' },
         app: { deps: ['angular', 'angularRoutes'] }
@@ -22,6 +24,7 @@ require.config({
 require([
     'angular',
     'angularRoutes',
+    'angularAnimate',
     'PartialPageController',
     'PartialPage1Controller',
     'PartialPage2Controller',

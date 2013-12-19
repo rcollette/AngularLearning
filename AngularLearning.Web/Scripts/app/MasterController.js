@@ -22,6 +22,14 @@ define(["require", "exports", "app", "controlModels/Tab"], function(require, exp
             return false;
         };
 
+        MasterController.prototype.ShowMenu = function () {
+            this.IsMainMenuVisible = true;
+        };
+
+        MasterController.prototype.HideMenu = function () {
+            this.IsMainMenuVisible = false;
+        };
+
         MasterController.prototype.CreateTabs = function () {
             this.Tabs.push(new Tab.Tab("tab 1", "tab1", "#/partialPageView1"));
             this.Tabs.push(new Tab.Tab("tab 2", "tab2", "#/partialPageView2"));

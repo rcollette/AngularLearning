@@ -26,6 +26,14 @@ export class MasterController {
         return false;
     }
 
+    public ShowMenu() {
+        this.IsMainMenuVisible = true;
+    }
+
+    public HideMenu() {
+        this.IsMainMenuVisible = false;
+    }
+
     private CreateTabs(): void {
         this.Tabs.push(new Tab.Tab("tab 1", "tab1", "#/partialPageView1"));
         this.Tabs.push(new Tab.Tab("tab 2", "tab2", "#/partialPageView2"));
