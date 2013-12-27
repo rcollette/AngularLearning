@@ -5,10 +5,11 @@ declare var Object;
 require.config({
     baseUrl: 'scripts/app',
     paths: {
-        angular: '../angular/angular',
-        angularRoutes: '../angular/angular-route',
-        angularAnimate: '../angular/angular-animate',
-        jquery: '../jquery/jquery-1.10.2.min'
+        angular: '../angular',
+        angularRoutes: '../angular-route',
+        angularAnimate: '../angular-animate.min',
+        jquery: '../jquery/jquery-1.10.2.min',
+        bootstrap: '../bootstrap.min'
     },
     shim: {
         angular: { 'exports': 'angular', deps: ['jquery'] },
@@ -16,7 +17,8 @@ require.config({
         angularAnimate: { deps: ['angular'] },
         angularMocks: { deps: ['angular'], 'exports': 'angular.mock' },
         jquery: { exports: '$' },
-        app: { deps: ['angular', 'angularRoutes'] }
+        bootstrap: { deps: ['jquery'] },
+        app: { deps: ['angular', 'angularRoutes', 'angularAnimate'] }
     },
     priority: [
         "angular"
@@ -27,12 +29,10 @@ require([
     'angular',
     'angularRoutes',
     'angularAnimate',
-    'PartialPageController',
-    'PartialPage1Controller',
-    'PartialPage2Controller',
     'app',
     'appRoutes',
-    'MasterController'
+    'MasterController',
+    'bootstrap'
 ], function (angular) {
         $(document).ready(function () {
             var $html = $('html');
