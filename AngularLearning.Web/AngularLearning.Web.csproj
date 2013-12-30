@@ -100,7 +100,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\angular\" />
     <Folder Include="Scripts\tests\acceptance\" />
     <Folder Include="Scripts\tests\unit\" />
   </ItemGroup>
