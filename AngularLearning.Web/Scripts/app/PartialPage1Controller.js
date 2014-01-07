@@ -20,8 +20,7 @@ define(["require", "exports", 'app', 'PartialPageController'], function(require,
     exports.PartialPage1Controller = PartialPage1Controller;
 
     //This would be the normal way of declaring the controller
-    app.app.controller('PartialPage1Controller', ["$scope", PartialPage1Controller]);
-
+    //app.app.controller('PartialPage1Controller', ["$scope", PartialPage1Controller]);
     //Due to dynamic loading, the controller must be registered after the fact.
     //See http://ify.io/lazy-loading-in-angularjs/ for details on lazy loading.
     app.app.ControllerProvider.register('PartialPage1Controller', PartialPage1Controller);

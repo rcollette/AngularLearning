@@ -39,4 +39,5 @@ export class MasterController {
         this.Tabs.push(new Tab.Tab("tab 2", "tab2", "#/partialPageView2"));
     }
 }
+
 app.app.controller('MasterController', ["$scope", MasterController]);

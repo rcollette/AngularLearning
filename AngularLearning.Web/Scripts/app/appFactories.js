@@ -2,19 +2,20 @@ define(["require", "exports", 'app'], function(require, exports, __app__) {
     /// <reference path="../typings/angular/angular.d.ts" />
     "use strict";
     var app = __app__;
-    var Application;
-    (function (Application) {
+
+    var LearningApplication;
+    (function (LearningApplication) {
         var Page = (function () {
             function Page() {
                 this._title = "default";
             }
             return Page;
         })();
-        Application.Page = Page;
-    })(Application || (Application = {}));
+        LearningApplication.Page = Page;
+    })(LearningApplication || (LearningApplication = {}));
 
     app.app.factory('Page', function () {
-        return new Application.Page();
+        return new LearningApplication.Page();
     });
 });
 //# sourceMappingURL=appFactories.js.map

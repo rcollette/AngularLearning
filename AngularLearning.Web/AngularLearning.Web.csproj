@@ -63,7 +63,6 @@
     <TypeScriptCompile Include="Scripts\app\controlModels\Tab.ts" />
     <TypeScriptCompile Include="Scripts\app\PartialPage1Controller.ts" />
     <TypeScriptCompile Include="Scripts\app\PartialPage2Controller.ts" />
-    <TypeScriptCompile Include="Scripts\app\appControllers.ts" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-mocks.js" />

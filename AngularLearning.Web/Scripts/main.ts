@@ -36,7 +36,7 @@ require([
 ], function (angular) {
         $(document).ready(function () {
             var $html = $('html');
-            angular.bootstrap($html, ['LearningApp']);
+            angular.bootstrap($html, ['learningApp']);
             // More info: https://groups.google.com/forum/#!msg/angular/yslVnZh9Yjk/MLi3VGXZLeMJ
             $html.addClass('ng-app');
         });

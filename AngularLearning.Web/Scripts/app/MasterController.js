@@ -38,6 +38,7 @@ define(["require", "exports", "app", "controlModels/Tab"], function(require, exp
         return MasterController;
     })();
     exports.MasterController = MasterController;
+
     app.app.controller('MasterController', ["$scope", MasterController]);
 });
 //# sourceMappingURL=MasterController.js.map
